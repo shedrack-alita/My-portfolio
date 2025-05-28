@@ -1,2 +1,2 @@
 # My-portfolio
-This app showcases my experience in the field of software development
+This app showcases my digital skills, experiences and projects.
