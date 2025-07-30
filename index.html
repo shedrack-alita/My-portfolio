@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="profile-section">
+      <div class="profile-image">
+        <img src="assets/image/photo.png" alt="Your Photo" id="profile-img">
+      </div>
+      <h3 class="profile-name">SHEDRACK ALITA</h3>
+      <p class="profile-title">Software Engineer & Designer</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/solution-driver " target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/Fortune_Tec?t=bd2kuyWrIJliYsKeyPZ3HQ&s=09" target="_blank" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/shedrack.alita" target="_blank" class="social-link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <!-- <a href="https://youtube.com/@your-channel" target="_blank" class="social-link">
+          <i class="fab fa-youtube"></i>
+        </a> -->
+      </div>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#home" class="nav-link active" data-page="home">
+          <i class="fas fa-home"></i> Home
+        </a></li>
+        <li><a href="#about" class="nav-link" data-page="about">
+          <i class="fas fa-user"></i> About
+        </a></li>
+        <li><a href="#resume" class="nav-link" data-page="resume">
+          <i class="fas fa-file-alt"></i> Resume
+        </a></li>
+        <li><a href="#portfolio" class="nav-link" data-page="portfolio">
+          <i class="fas fa-briefcase"></i> Portfolio
+        </a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">
+          <i class="fas fa-envelope"></i> Contact
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <div class="home-content">
+        <div class="home-text">
+          <h1>Hello, I'm <span class="highlight">Shedrack Alita</span></h1>
+          <h2>Software Engineer & Designer</h2>
+          <p>I design and build software applications that enhance business and individual efficiency, brand visibility, and user engagement. My work bridges engineering and technology to solve real-world problems.</p>
+          <div class="home-buttons">
+            <a href="#contact" class="btn primary">Contact Me</a>
+            <a href="assets/cv/my_cv.pdf" target="_blank" download class="btn secondary">Download CV</a>
+          </div>
+        </div>
+        <div class="home-image">
+          <img src="assets/image/photo.png" alt="Your Photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+      <div class="page-header">
+        <h2>About Me</h2>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-portrait">
+            <img src="assets/image/photo.png" alt="Portrait">
+          </div>
+          <div class="about-text-content">
+            <div class="who-am-i">
+              <h4>Who Am I?</h4>
+              <p>I'm an Electrical and Electronic Engineering graduate, passionate about software engineering and systems control and automation. My work integrates engineering and digital tools to create practical solutions that meet evolving individual and organizational needs.</p>
+            </div>
+            
+            <div class="personal-info-section">
+              <h4>Personal Info</h4>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="label">Phone</span>
+                    <span class="value">+234 7032 986 425</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="label">Location</span>
+                    <span class="value">Abakaliki, Ebonyi State, Nigeria.</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="label">Email</span>
+                    <span class="value">shedrackalita@gmail.com</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="label">Birthday</span>
+                    <span class="value">September 12, 1997</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services">
+          <h4>What I Do!</h4>
+          <div class="services-grid">
+            <div class="service-item">
+              <i class="fas fa-palette"></i>
+              <h5>UI/UX Design</h5>
+              <p>Creating intuitive and beautiful user interfaces that enhance user experience.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-mobile-alt"></i>
+              <h5>App Development</h5>
+              <p>Building responsive web applications and mobile solutions.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-code"></i>
+              <h5>Web Development</h5>
+              <p>Full-stack development with modern technologies and frameworks.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-cogs"></i>
+              <h5>Systems Control</h5>
+              <p>Designing and implementing automation and control systems.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-paint-brush"></i>
+              <h5>Graphic Design</h5>
+              <p>Creating visually appealing graphics and branding materials.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-chart-line"></i>
+              <h5>Project Management</h5>
+              <p>Leading projects from conception to completion with efficiency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Page -->
+    <section id="resume" class="page">
+      <div class="page-header">
+        <h2>Resume</h2>
+      </div>
+      
+      <div class="resume-content">
+        <div class="resume-section">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2025-2026</div>
+              <div class="timeline-content">
+                <h4>Master's in Electrical and Electronics (Instrumentation and Control) Engineering</h4>
+                <p>Alex Ekwueme Federal University Ndufu-Alike Ikwo, Ebonyi State, Nigeria.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2016-2021</div>
+              <div class="timeline-content">
+                <h4>Bachelor's in Electrical and Electronics (Power System) Engineering</h4>
+                <p>University of Ibadan, Oyo State, Nigeria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3><i class="fas fa-briefcase"></i> Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2022 - Present</div>
+              <div class="timeline-content">
+                <h4>Senior Software Engineer</h4>
+                <p>Company Name, Location</p>
+                <ul class="job-desc">
+                  <li>Led a team of 5+ engineers to deliver scalable web applications.</li>
+                  <li>Architected and implemented RESTful APIs and microservices.</li>
+                  <li>Improved application performance and reliability by 30%.</li>
+                  <li>Mentored junior developers and conducted code reviews.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2020 - 2022</div>
+              <div class="timeline-content">
+                <h4>Full Stack Developer</h4>
+                <p>Company Name, Location</p>
+                <ul class="job-desc">
+                  <li>Developed responsive frontend interfaces using React and Vue.</li>
+                  <li>Integrated third-party APIs and payment gateways.</li>
+                  <li>Collaborated with designers to enhance user experience.</li>
+                  <li>Automated deployment pipelines with CI/CD tools.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="skills-section">
+          <h3>Working Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Frontend Development</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Backend Development</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>UI/UX Design</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Systems Control</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3><i class="fas fa-lightbulb"></i> Area of Interest</h3>
+          <ul class="interest-list">
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>UI/UX Design & Human-Computer Interaction</li>
+            <li>Automation & Robotics</li>
+            <li>Embedded Systems</li>
+            <li>Cloud Computing</li>
+            <li>Control Systems</li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h3><i class="fas fa-certificate"></i> Certifications</h3>
+          <ul class="cert-list">
+            <li>Certified Scrum Master (CSM) —<span class="cert-year">2022</span></li>
+            <li>AWS Certified Solutions Architect —<span class="cert-year">2021</span></li>
+            <li>Google UX Design Professional Certificate —<span class="cert-year">2020</span></li>
+            <li>Siemens Certified Automation Engineer —<span class="cert-year">2019</span></li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h3><i class="fas fa-brain"></i> Knowledge</h3>
+          <div class="knowledge-list">
+            <span>Creativity</span>
+            <span>Communication</span>
+            <span>Social Media</span>
+            <span>Time Management</span>
+            <span>Flexibility</span>
+            <span>Teamwork</span>
+            <span>Problem Solving</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section id="portfolio" class="page">
+      <div class="page-header">
+        <h2>Portfolio</h2>
+      </div>
+      
+      <div class="portfolio-content">
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+          <button class="filter-btn" data-filter="app">App Development</button>
+          <button class="filter-btn" data-filter="design">UI/UX Design</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <img src="project1.jpg" alt="Project 1">
+            </div>
+            <div class="portfolio-overlay">
+              <h4>E-commerce Website</h4>
+              <p>Web Development</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="app">
+            <div class="portfolio-image">
+              <img src="project2.jpg" alt="Project 2">
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Mobile App</h4>
+              <p>App Development</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <div class="portfolio-image">
+              <img src="project3.jpg" alt="Project 3">
+            </div>
+            <div class="portfolio-overlay">
+              <h4>UI/UX Design</h4>
+              <p>Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+      <div class="page-header">
+        <h2>Contact</h2>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone:</h4>
+              <p>+234 7032 986 425</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email:</h4>
+              <p>shedrackalita@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address:</h4>
+              <p>Abakaliki, Ebonyi State, Nigeria</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h4>I'm always open to discussing product design work or partnerships.</h4>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Name *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Message *" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="site-footer">
+    <span>&copy; <span id="footer-year"></span> All rights reserved.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
