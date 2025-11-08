@@ -221,4 +221,73 @@ if (contactBtn) {
       behavior: 'smooth'
     });
   });
-} 
+}
+
+// Portfolio Modal Functionality
+const modal = document.getElementById('design-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalImage = document.getElementById('modal-image');
+const modalDescription = document.getElementById('modal-description');
+const closeModal = document.querySelector('.close-modal');
+
+// Open modal for design projects
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('view-design-btn')) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const portfolioItem = e.target.closest('.portfolio-item');
+    const title = portfolioItem.getAttribute('data-title');
+    const description = portfolioItem.getAttribute('data-description');
+    const imageSrc = portfolioItem.querySelector('.portfolio-image img').src;
+    
+    // Set modal content
+    modalTitle.textContent = title;
+    modalImage.src = imageSrc;
+    modalDescription.textContent = description;
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+});
+
+// Close modal
+function closeModalFunction() {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+if (closeModal) {
+  closeModal.addEventListener('click', closeModalFunction);
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    closeModalFunction();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && modal.style.display === 'block') {
+    closeModalFunction();
+  }
+});
+
+// Portfolio item click handlers for web/app projects
+document.addEventListener('click', function(e) {
+  const portfolioItem = e.target.closest('.portfolio-item');
+  if (portfolioItem && !portfolioItem.classList.contains('design-project')) {
+    const url = portfolioItem.getAttribute('data-url');
+    const github = portfolioItem.getAttribute('data-github');
+    
+    // If clicked on the item itself (not on links), open the main URL
+    if (e.target === portfolioItem || e.target.closest('.portfolio-image')) {
+      if (url) {
+        window.open(url, '_blank');
+      }
+    }
+  }
+}); 

@@ -54,6 +54,7 @@ body {
   background: #ffffff;
   box-shadow: 2px 0 10px rgba(0,0,0,0.1);
   z-index: 1000;
+  overflow: auto;
 }
 
 .main-content {
@@ -323,6 +324,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
+  margin: 0.5rem;
 }
 
 .about-text-content {
@@ -698,6 +700,7 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .portfolio-item:hover {
@@ -707,12 +710,95 @@ body {
 .portfolio-image {
   height: 200px;
   overflow: hidden;
+  position: relative;
 }
 
 .portfolio-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(142, 15, 60, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-hover-overlay {
+  opacity: 1;
+}
+
+.portfolio-hover-content {
+  text-align: center;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.portfolio-hover-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.portfolio-hover-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.portfolio-link:hover {
+  background: #ffffff;
+  color: #8e0f3c;
+  transform: translateY(-2px);
+}
+
+.view-design-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #f64e57;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-design-btn:hover {
+  background: #e491ae;
+  transform: translateY(-2px);
 }
 
 .portfolio-overlay {
@@ -721,13 +807,126 @@ body {
 }
 
 .portfolio-overlay h4 {
-  color: #8e0f3c;
+  color: #f64e57;
   margin-bottom: 0.5rem;
 }
 
-.portfolio-overlay p {
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  z-index: 10001;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
   color: #f64e57;
-  font-weight: 500;
+}
+
+.modal-header {
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+  color: #8e0f3c;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.modal-image {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-description h4 {
+  color: #8e0f3c;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.modal-description p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+  }
+  
+  .modal-header,
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .portfolio-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .portfolio-link {
+    justify-content: center;
+  }
 }
 
 /* Contact Page */
@@ -1065,4 +1264,122 @@ body {
 .job-desc li {
   margin-bottom: 0.3rem;
   padding-left: 0.2rem;
+}
+
+/* Digital Tools & Technologies Section */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tool-category {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid #f64e57;
+  transition: all 0.3s ease;
+}
+
+.tool-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(246, 78, 87, 0.1);
+}
+
+.tool-category h4 {
+  color: #8e0f3c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tool-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tool-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tool-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tool-item:hover img {
+  transform: scale(1.1);
+}
+
+.tool-item span {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Responsive design for tools section */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .tool-items {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .tool-item {
+    padding: 0.8rem 0.3rem;
+  }
+  
+  .tool-item img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .tool-item span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-category {
+    padding: 1rem;
+  }
+  
+  .tool-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .tool-item {
+    padding: 0.6rem 0.2rem;
+  }
+  
+  .tool-item img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .tool-item span {
+    font-size: 0.75rem;
+  }
 }
